@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './navBar.module.css'
+import Link from "next/link"
 
 export default function Navbar() 
 {
@@ -8,32 +9,32 @@ export default function Navbar()
     {
       id:1,
       title:"Home",
-      link:"#"
+      url:"/"
     },
     {
       id:2,
       title:"Portfolio",
-      link:"#"
+      url:"/portFolio"
     },
     {
       id:3,
       title:"Blog",
-      link:"#"
+      url:"/blog"
     },
     {
       id:4,
       title:"About",
-      link:"#"
+      url:"/about"
     },
     {
       id:5,
       title:"Contact",
-      link:"#"
+      url:"/contact"
     },
     {
       id:6,
       title:"DashBoard",
-      link:"#"
+      url:"/dashBoard"
     }
   ]
 
@@ -44,7 +45,8 @@ export default function Navbar()
         <div>
           {links.map((link) => (
 
-              <div><a href={links.link}>{link.title}</a></div>
+              <div><Link href={link.url}>{link.title}</Link></div>
+              
 
             ))}
         </div>
