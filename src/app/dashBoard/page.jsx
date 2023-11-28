@@ -6,7 +6,6 @@ export default function DashBoard() {
     <main>
         <div>This is dashBoard page</div>
     </main>
-    
   )
 
 }

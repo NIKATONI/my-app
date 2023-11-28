@@ -6,7 +6,6 @@ export default function PortFolio() {
     <main>
         <div>This is portfolio page</div>
     </main>
-    
   )
 
 }
