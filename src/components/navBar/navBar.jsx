@@ -37,9 +37,8 @@ export default function Navbar()
       url:"/dashBoard"
     }
   ]
-
+// Hi
   return (
-// func
     <div className={styles.container}>
         <div>Main</div>
         <div>
