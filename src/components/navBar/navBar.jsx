@@ -39,7 +39,7 @@ export default function Navbar()
   ]
 
   return (
-
+// func
     <div className={styles.container}>
         <div>Main</div>
         <div>
