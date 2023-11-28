@@ -37,7 +37,7 @@ export default function Navbar()
       url:"/dashBoard"
     }
   ]
-// Hi
+
   return (
     <div className={styles.container}>
         <div>Main</div>
@@ -45,7 +45,6 @@ export default function Navbar()
           {links.map((link) => (
 
               <div><Link href={link.url}>{link.title}</Link></div>
-              
 
             ))}
         </div>
