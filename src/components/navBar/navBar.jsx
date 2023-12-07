@@ -2,54 +2,53 @@ import React from 'react'
 import styles from './navBar.module.css'
 import Link from "next/link"
 
-export default function Navbar() 
-{
+export default function Navbar() {
 
   const links = [
     {
-      id:1,
-      title:"Home",
-      url:"/"
+      id: 1,
+      title: "Home",
+      url: "/"
     },
     {
-      id:2,
-      title:"Portfolio",
-      url:"/portFolio"
+      id: 2,
+      title: "Portfolio",
+      url: "/portFolio"
     },
     {
-      id:3,
-      title:"Blog",
-      url:"/blog"
+      id: 3,
+      title: "Blog",
+      url: "/blog"
     },
     {
-      id:4,
-      title:"About",
-      url:"/about"
+      id: 4,
+      title: "About",
+      url: "/about"
     },
     {
-      id:5,
-      title:"Contact",
-      url:"/contact"
+      id: 5,
+      title: "Contact",
+      url: "/contact"
     },
     {
-      id:6,
-      title:"DashBoard",
-      url:"/dashBoard"
+      id: 6,
+      title: "DashBoard",
+      url: "/dashBoard"
     }
   ]
 
   return (
     <div className={styles.container}>
-        <div>Main</div>
-        <div>
-          {links.map((link) => (
-
-              <div><Link href={link.url}>{link.title}</Link></div>
-
-            ))}
-        </div>
+      <Link href="/" className={styles.logo}>
+        Lamamia
+      </Link>
+      <div className={styles.links}>
+        {links.map((link) => (
+          <Link href={link.url} className={styles.links}>{link.title}</Link>
+        ))}
+        <button className={styles.logout}>Logout</button>
+      </div>
     </div>
-
-  )
+  );
 
 }
