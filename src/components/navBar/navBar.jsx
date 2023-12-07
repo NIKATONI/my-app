@@ -36,7 +36,7 @@ export default function Navbar() {
       url: "/dashBoard"
     }
   ]
-
+  
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
