@@ -2,19 +2,38 @@ import React from 'react'
 import styles from './footer.module.css'
 import Image from 'next/image'
 
-export default function Footer() 
-{
+export default function Footer() {
+
+  const socials = [
+    {
+      src: "/1.png",
+      alt: "facebook"
+    },
+    {
+      src: "/2.png",
+      alt: "instagram"
+    },
+    {
+      src: "/3.png",
+      alt: "Picture of the author"
+    },
+    {
+      src: "/4.png",
+      alt: "youtube"
+    }
+  ]
 
   return (
 
     <div className={styles.container}>
-        <div>@all rights reserved</div>
-        <div className={styles.socialNewtworks}>
-          <Image className={styles.icon} src="/1.png" width={25} height={25} alt="facebook"/>
-          <Image className={styles.icon} src="/2.png" width={25} height={25} alt="instagram"/>
-          <Image className={styles.icon} src="/3.png" width={25} height={25} alt="Picture of the author"/>
-          <Image className={styles.icon} src="/4.png" width={25} height={25} alt="youtube"/>
-        </div>
+      <div>@all rights reserved</div>
+      <div className={styles.socialNewtworks}>
+        {socials.map((item) => (
+
+          <Image className={styles.icon} src={item.src} width={25} height={25} alt={item.alt} />
+
+        ))}
+      </div>
     </div>
 
   )
