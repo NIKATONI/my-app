@@ -1,5 +1,4 @@
-.container 
-{
+.container {
 
   height: 100px;
   display: flex;
@@ -8,8 +7,7 @@
 
 }
 
-.links 
-{
+.links {
 
   display: flex;
   gap: 20px;
@@ -19,8 +17,7 @@
 
 }
 
-.logo 
-{
+.logo {
 
   font-weight: bold;
   font-size: 22px;
@@ -29,8 +26,7 @@
 
 }
 
-.logout 
-{
+.logout {
 
   padding: 5px;
   border: none;
