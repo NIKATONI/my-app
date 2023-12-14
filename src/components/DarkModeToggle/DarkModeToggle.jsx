@@ -1,14 +1,21 @@
 "use client";
-import React from 'react'
-import styles from "./DarkModeToggle.module.css"
 
-export default function DarkModeToggle() {
-    return (
-        <div className={styles.container} 
-        onMouseEnter={() => {console.log("hi")}}>
-            <div className={styles.icon}>🌙</div>
-            <div className={styles.icon}>🔆</div>
-            <div className={styles.ball} />
-        </div>
-    )
+import React, { useContext, useState } from "react";
+import styles from "./darkModeToggle.module.css";
+import { ThemeContext } from "@/content/ThemeContent";
+
+function DarkModeToggle() {
+  const { toggle, mode } = useContext(ThemeContext);
+  return (
+    <div className={styles.container} onClick={toggle}>
+      <div className={styles.icon}>🌙</div>
+      <div className={styles.icon}>🔆</div>
+      <div
+        className={styles.ball}
+        style={mode === "dark" ? { left: "2px" } : { right: "2px" }}
+      />
+    </div>
+  );
 }
+
+export default DarkModeToggle;
