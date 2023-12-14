@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './navBar.module.css'
 import Link from "next/link"
-import DarkModeToggle from "@/components/DarkModeToggle/DarkModeToggle"
+import DarkModeToggle from "@/components/darkModeToggle/DarkModeToggle"
 
 export default function Navbar() {
 
