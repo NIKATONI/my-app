@@ -3,8 +3,7 @@ import styles from './page.module.css'
 import Hero from "public/hero.png";
 import Button from '@/components/button/Button'
 
-export default function Home()
-{
+export default function Home() {
 
   return (
     <div className={styles.container}>
@@ -16,7 +15,7 @@ export default function Home()
           Turning your Idea into Reality. We bring together the teams from the
           global tech industry.
         </p>
-        <Button title="See Our Works" url="/portfolio"/>
+        <Button title="See Our Works" url="/portfolio" />
       </div>
       <div className={styles.item}>
         <Image src={Hero} alt="" className={styles.img} />
