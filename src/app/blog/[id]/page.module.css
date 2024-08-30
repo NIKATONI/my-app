@@ -1,5 +1,3 @@
-.container {}
-
 .top {
     display: flex;
 }
@@ -35,6 +33,7 @@
     flex: 1;
     height: 300px;
     position: relative;
+    background-color: red;
 }
 
 .image {

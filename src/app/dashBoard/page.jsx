@@ -1,11 +1,14 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 function Dashboard() {
-  const [url, setUrl] = useState([]);
+  const [url, setUrl] = useState("");
 
   useEffect(() => {
-    fetch(url).then((resp) => resp.json()).then((json) => console.log(json))
+    fetch(url)
+      .then((resp) => resp.json())
+      .then((json) => console.log(json));
   }, [url]);
 
   return (
@@ -25,6 +28,7 @@ function Dashboard() {
       >
         მეორე
       </button>
+      <Link href={"/dashBoard/crud"}>Go to crud operations</Link>
     </div>
   );
 }
